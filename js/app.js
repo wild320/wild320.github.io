@@ -49,6 +49,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (post) {
             document.title = `${post.title} | Wild Jaramillo`;
+
+            // SEO dinámico: actualizar meta tags para compartir en redes sociales
+            const updateMeta = (selector, attr, value) => {
+                const el = document.querySelector(selector);
+                if (el) el.setAttribute(attr, value);
+            };
+            updateMeta('meta[name="description"]', 'content', post.preview);
+            updateMeta('meta[property="og:title"]', 'content', `${post.title} | Wild Jaramillo`);
+            updateMeta('meta[property="og:description"]', 'content', post.preview);
+            updateMeta('meta[property="og:image"]', 'content', post.img);
+            updateMeta('meta[property="og:type"]', 'content', 'article');
+            updateMeta('meta[name="twitter:title"]', 'content', `${post.title} | Wild Jaramillo`);
+            updateMeta('meta[name="twitter:description"]', 'content', post.preview);
+            updateMeta('meta[name="twitter:image"]', 'content', post.img);
+
             articleDoc.innerHTML = `
                 <div class="blog-post-header">
                     ${post.isFeatured ? '<span class="tag" style="margin: 0 auto 2rem; display: block; width: max-content;">Destacado</span>' : ''}

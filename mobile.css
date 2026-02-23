@@ -2,17 +2,43 @@
 
 @media (max-width: 768px) {
   html {
-    font-size: 55%; /* Reduce base font size for smaller screens */
+    font-size: 55%;
   }
 
   /* Header & Navigation */
   nav {
-    flex-wrap: wrap; /* Permit items to wrap if necessary */
+    flex-wrap: wrap;
     padding: 1rem 5%;
   }
 
+  /* Hamburger visible en mobile */
+  .hamburger {
+    display: flex;
+  }
+
   .nav__links {
-    gap: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--bg-surface);
+    flex-direction: column;
+    padding: 8rem 3rem 3rem;
+    gap: 2.5rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 40px rgba(0,0,0,0.4);
+    z-index: 1000;
+    border-left: 1px solid var(--border-color);
+  }
+
+  .nav__links--open {
+    right: 0;
+  }
+
+  .nav__links a {
+    font-size: 2rem;
   }
 
   /* Home */
@@ -64,7 +90,7 @@
   }
 
   .profile-hero__img-container {
-    order: -1; /* Ensure image is on top on mobile */
+    order: -1;
   }
 
   .profile-hero__img {
@@ -90,7 +116,46 @@
     grid-template-columns: 1fr;
   }
 
-  /* WhatsApp Floating */
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline__item {
+    padding-left: 2rem;
+  }
+
+  /* Tag Filters */
+  .tag-filters {
+    gap: 0.8rem;
+  }
+
+  .tag-filter {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    gap: 2rem;
+  }
+
+  /* Blog Post Single */
+  .blog-post-title {
+    font-size: 3.2rem;
+  }
+
+  .blog-post-meta {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* WhatsApp & Back to Top */
   .whatsapp-float {
     width: 50px;
     height: 50px;
@@ -101,17 +166,18 @@
     width: 28px;
     height: 28px;
   }
+  .back-to-top {
+    bottom: 80px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 480px) {
   html {
     font-size: 50%;
-  }
-
-  .nav__links {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 1.5rem;
   }
 
   .nav__logo-container img {

@@ -7,6 +7,7 @@ const blogPosts = [
         img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop",
         preview: "Las nuevas tecnologías ya no son solo un experimento; se han convertido en un pilar esencial para los ingenieros de software, revolucionando tareas y transformando arquitecturas completas.",
         tag: "Destacado",
+        category: "innovacion",
         isFeatured: true,
         content: `
             <p>Las nuevas tecnologías ya no son solo un experimento; se han convertido en un pilar esencial para los ingenieros de software, revolucionando tareas y transformando arquitecturas completas a una velocidad nunca antes vista.</p>
@@ -31,6 +32,7 @@ const blogPosts = [
         readTime: "8 min",
         img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop",
         preview: "Un análisis del renacimiento de Server-Side Rendering (SSR) y cómo los nuevos frameworks están combinando lo mejor de ambos mundos.",
+        category: "javascript",
         isFeatured: false,
         content: `
             <p>Un análisis del renacimiento de Server-Side Rendering (SSR) y cómo los nuevos frameworks están combinando lo mejor de ambos mundos: la rapidez de un sitio estático con la interactividad de una Single Page Application.</p>
@@ -56,6 +58,7 @@ const blogPosts = [
         readTime: "6 min",
         img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&auto=format&fit=crop",
         preview: "Con la llegada de servicios cada vez más automatizados en la web, la validación y seguridad de las APIs es más vital que nunca.",
+        category: "ciberseguridad",
         isFeatured: false,
         content: `
             <p>Con la llegada de servicios cada vez más automatizados en la web, la validación y seguridad de las APIs es más vital que nunca. Atrás quedaron los días en que bastaba con una leve validación en el formulario frontend.</p>
@@ -80,6 +83,7 @@ const blogPosts = [
         readTime: "7 min",
         img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&auto=format&fit=crop",
         preview: "Exploraremos si The Blockchain realmente puede reemplazar los modelos cliente-servidor para ciertas aplicaciones de misión crítica.",
+        category: "web3",
         isFeatured: false,
         content: `
             <p>Exploraremos si The Blockchain realmente puede reemplazar los modelos cliente-servidor nativos para ciertas aplicaciones de misión crítica usando las nuevas capacidades de la Web3.</p>

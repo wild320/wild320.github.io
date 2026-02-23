@@ -6,55 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mí | Wild Jaramillo - Desarrollador Web</title>
     <meta name="description" content="Conoce más sobre Wild Jaramillo, desarrollador web especializado en frontend moderno, diseño UX y proyectos de software innovadores.">
-    <meta name="keywords" content="Wild Jaramillo, desarrollador web, sobre mí, perfil profesional, proyectos, frontend, UX, open source">
+    <meta name="keywords" content="Wild Jaramillo, desarrollador web, sobre mí, perfil profesional, proyectos, frontend, UX">
     <meta name="author" content="Wild Jaramillo">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b1120">
     <link rel="canonical" href="https://wild320.github.io/profile.html">
-
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://wild320.github.io/profile.html">
     <meta property="og:title" content="Sobre Mí | Wild Jaramillo - Desarrollador Web">
-    <meta property="og:description" content="Desarrollador Web especializado en frontend moderno, diseño UX y proyectos de software innovadores.">
+    <meta property="og:description" content="Desarrollador Web especializado en frontend moderno, diseño UX y proyectos innovadores.">
     <meta property="og:image" content="https://wild320.github.io/assets/img/foto-wild.png">
     <meta property="og:locale" content="es_CO">
     <meta property="og:site_name" content="Wild Jaramillo">
-    <meta property="profile:first_name" content="Wild">
-    <meta property="profile:last_name" content="Jaramillo">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sobre Mí | Wild Jaramillo - Desarrollador Web">
+    <meta name="twitter:title" content="Sobre Mí | Wild Jaramillo">
     <meta name="twitter:description" content="Desarrollador Web especializado en frontend moderno, diseño UX y proyectos innovadores.">
     <meta name="twitter:image" content="https://wild320.github.io/assets/img/foto-wild.png">
-
     <link rel="icon" type="image/png" href="./assets/img/wild-logo.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
-
-    <!-- Datos Estructurados JSON-LD -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "mainEntity": {
-            "@type": "Person",
-            "name": "Wild Jaramillo",
-            "jobTitle": "Desarrollador Web",
-            "url": "https://wild320.github.io/profile.html",
-            "image": "https://wild320.github.io/assets/img/foto-wild.png",
-            "sameAs": [
-                "https://github.com/wild320",
-                "https://www.linkedin.com/in/wild320/",
-                "https://telegram.me/wild320"
-            ],
-            "knowsAbout": ["Desarrollo Web", "JavaScript", "Frontend", "Diseño UX", "Ciberseguridad"]
-        }
-    }
+    {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Wild Jaramillo","jobTitle":"Desarrollador Web","url":"https://wild320.github.io/profile.html","image":"https://wild320.github.io/assets/img/foto-wild.png","sameAs":["https://github.com/wild320","https://www.linkedin.com/in/wild320/"],"knowsAbout":["Desarrollo Web","JavaScript","Frontend","Diseño UX","Ciberseguridad"]}}
     </script>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader"><div class="preloader__spinner"></div></div>
+
     <header>
         <nav>
             <div class="nav__logo-container">
@@ -70,11 +48,18 @@
                 <a href="blogs.html">Blog</a>
                 <a href="profile.html" class="active">Sobre mí</a>
             </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+            <button id="hamburger" class="hamburger" aria-label="Menú">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
         </nav>
     </header>
 
     <main id="main-content">
         <div class="grid__container">
+            <!-- Hero Section -->
             <section class="profile-hero">
                 <div class="profile-hero__img-container">                    
                     <img src="./assets/img/foto-wild.png" alt="Foto de Wild Jaramillo" class="profile-hero__img">
@@ -92,26 +77,96 @@
                 </div>
             </section>
 
+            <!-- Skills Section -->
+            <section class="skills-section">
+                <h2 class="section-title reveal-on-scroll">Tecnologías y Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-card reveal-on-scroll">
+                        <div class="skill-card__header">
+                            <span class="skill-card__name">JavaScript / TypeScript</span>
+                            <span class="skill-card__percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-bar__fill" style="--fill: 90%"></div></div>
+                    </div>
+                    <div class="skill-card reveal-on-scroll">
+                        <div class="skill-card__header">
+                            <span class="skill-card__name">Angular</span>
+                            <span class="skill-card__percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-bar__fill" style="--fill: 85%"></div></div>
+                    </div>
+                    <div class="skill-card reveal-on-scroll">
+                        <div class="skill-card__header">
+                            <span class="skill-card__name">HTML5 / CSS3</span>
+                            <span class="skill-card__percent">95%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-bar__fill" style="--fill: 95%"></div></div>
+                    </div>
+                    <div class="skill-card reveal-on-scroll">
+                        <div class="skill-card__header">
+                            <span class="skill-card__name">Node.js</span>
+                            <span class="skill-card__percent">75%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-bar__fill" style="--fill: 75%"></div></div>
+                    </div>
+                    <div class="skill-card reveal-on-scroll">
+                        <div class="skill-card__header">
+                            <span class="skill-card__name">Git & DevOps</span>
+                            <span class="skill-card__percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-bar__fill" style="--fill: 80%"></div></div>
+                    </div>
+                    <div class="skill-card reveal-on-scroll">
+                        <div class="skill-card__header">
+                            <span class="skill-card__name">Bases de Datos (SQL/NoSQL)</span>
+                            <span class="skill-card__percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-bar__fill" style="--fill: 70%"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline Experiencia -->
+            <section class="timeline-section">
+                <h2 class="section-title reveal-on-scroll">Experiencia Profesional</h2>
+                <div class="timeline">
+                    <div class="timeline__item reveal-on-scroll">
+                        <span class="timeline__date">2024 — Presente</span>
+                        <h3 class="timeline__title">Desarrollador Frontend Senior</h3>
+                        <p class="timeline__desc">Liderazgo de equipos de desarrollo frontend con Angular y TypeScript. Implementación de arquitecturas escalables, integración continua y mejoras en rendimiento web.</p>
+                    </div>
+                    <div class="timeline__item reveal-on-scroll">
+                        <span class="timeline__date">2022 — 2024</span>
+                        <h3 class="timeline__title">Desarrollador Full Stack</h3>
+                        <p class="timeline__desc">Desarrollo de aplicaciones web completas con Node.js en backend y Angular en frontend. Gestión de bases de datos SQL y despliegues en la nube.</p>
+                    </div>
+                    <div class="timeline__item reveal-on-scroll">
+                        <span class="timeline__date">2020 — 2022</span>
+                        <h3 class="timeline__title">Desarrollador Web Junior</h3>
+                        <p class="timeline__desc">Creación de interfaces web responsive, maquetación con HTML/CSS y primeros proyectos en JavaScript y frameworks modernos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Proyectos -->
             <section class="projects-section">
-                <h2 class="section-title">Mis Proyectos Destacados</h2>
+                <h2 class="section-title reveal-on-scroll">Mis Proyectos Destacados</h2>
                 <div class="projects-grid">
-                    <article class="project-card">
+                    <article class="project-card reveal-on-scroll">
                         <img src="./assets/img/googleclone.png" alt="Clon de Google" class="project-card__img">
                         <div class="project-card__overlay">
                             <h3 class="project-card__title">Clon de Búsqueda UX</h3>
                             <p class="project-card__tech">HTML5, CSS3, Flexbox</p>
                         </div>
                     </article>
-
-                    <article class="project-card">
+                    <article class="project-card reveal-on-scroll">
                         <img src="./assets/img/batata.png" alt="Batata Bit" class="project-card__img">
                         <div class="project-card__overlay">
                             <h3 class="project-card__title">Batata Bit Crypto Platform</h3>
                             <p class="project-card__tech">Mobile First, UI Design, CSS Variables</p>
                         </div>
                     </article>
-
-                    <article class="project-card">
+                    <article class="project-card reveal-on-scroll">
                         <img src="./assets/img/landingpageslider.png" alt="Landing Page Slider" class="project-card__img">
                         <div class="project-card__overlay">
                             <h3 class="project-card__title">Slider Interactivo Premium</h3>
@@ -119,6 +174,26 @@
                         </div>
                     </article>
                 </div>
+            </section>
+
+            <!-- Contacto -->
+            <section class="contact-section">
+                <h2 class="section-title reveal-on-scroll">Contáctame</h2>
+                <form id="contact-form" class="contact-form reveal-on-scroll" action="https://formspree.io/f/xvoewekg" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
             </section>
         </div>
     </main>
@@ -142,5 +217,10 @@
             <path d="M21.56 18.07c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.78.98-.95 1.18-.18.2-.35.23-.65.08-.3-.15-1.27-.47-2.43-1.5-1.02-.91-1.7-2.03-1.9-2.33-.2-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.5h-.58c-.2 0-.53.08-.8.38-.27.3-1.03 1-1.03 2.45 0 1.45 1.05 2.85 1.2 3.05.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.7.18 1.34.16 1.84.1.56-.07 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z" fill="#FFF"/>
         </svg>
     </a>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

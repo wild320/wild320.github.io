@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
             } else {
                 const articleHTML = `
-                    <article class="blog-card">
+                    <article class="blog-card reveal-on-scroll" data-tag="${post.category || 'all'}">
                         <div class="blog-card__img-container">
                             <img src="${post.img}" alt="${post.title}" class="blog-card__img">
                         </div>

@@ -9,22 +9,20 @@
     <meta name="author" content="Wild Jaramillo">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b1120">
-
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Wild Jaramillo">
     <meta property="og:locale" content="es_CO">
     <meta property="og:image" content="https://wild320.github.io/assets/img/wild-logo.png">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://wild320.github.io/assets/img/wild-logo.png">
-
     <link rel="icon" type="image/png" href="./assets/img/wild-logo.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader"><div class="preloader__spinner"></div></div>
+
     <header>
         <nav>
             <div class="nav__logo-container">
@@ -40,12 +38,17 @@
                 <a href="blogs.html" class="active">Blog</a>
                 <a href="profile.html">Sobre mí</a>
             </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+            <button id="hamburger" class="hamburger" aria-label="Menú">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
         </nav>
     </header>
 
     <main id="main-content">
         <div class="grid__container">
-            <!-- Este contenedor será poblado dinámicamente por JS -->
             <article class="blog-post" id="single-article-content"></article>
         </div>
     </main>
@@ -70,8 +73,11 @@
         </svg>
     </a>
 
-    <!-- Scripts de carga -->
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
+
     <script src="js/blogData.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

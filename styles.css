@@ -901,9 +901,13 @@ footer {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  padding: 2.5rem;
+  padding: 2rem 2.5rem;
   backdrop-filter: blur(12px);
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .skill-card:hover {

@@ -1,92 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wild blog | Blogs</title>
+    <title>Blog de Tecnología e Innovación | Wild Jaramillo</title>
+    <meta name="description" content="Últimos artículos sobre innovación, programación, desarrollo web y tendencias tecnológicas.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mobile.css" media="(max-width: 420px)">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
 </head>
 <body>
     <header>
-        <section class="header__icons-container">
-            <div class="icons">
-                <a href="https://www.instagram.com/wildjaramillo/"><span class="instagram social__icon"></span></a>
-                <a href="https://twitter.com/wild320"><span class="twitter  social__icon"></span></a>
-                <a href="https://telegram.me/wild320"><span class="telegram social__icon"></span></a>
-                <a href="https://github.com/wild320"><span class="github social__icon"></span></a>
-                <a href="https://www.linkedin.com/in/wild320/"><span class="linkedin social__icon"></span></a>
-            </div>
-        </section>
         <nav>
-            <section class="nav__logo-container">
-                <a href="/"><img src="./assets/img/wild-logo.png" alt="Logo"></a>
-            </section>
-            <section class="profile__link">
-                <a href="profile.html">Sobre mi</a>
-            </section>
-
+            <div class="nav__logo-container">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="./assets/img/wild-logo-white.png" media="(prefers-color-scheme: dark)">
+                        <img src="./assets/img/wild-logo.png" alt="Logo de Wild">
+                    </picture>
+                </a>
+            </div>
+            <div class="nav__links">
+                <a href="index.html">Inicio</a>
+                <a href="blogs.html" class="active">Blog</a>
+                <a href="profile.html">Sobre mí</a>
+            </div>
         </nav>
     </header>
-    <main class="blogs__main">
-        <section class="blogs__news-container">
-            <div class="grid__container blogs__main-new">
-                <p class="noticias__tittle">Noticias</p>
-                <div class="blogs__news-img-container">
-                    <img src="/assets/img/ovni.webp" alt="ovni">
-                </div>
-                <div class="blogs__news-info-container">
-                    <h2 class="home__blog-tittle">Día del ovni</h2>
-                    <p class="home__blog-intro">La fecha refiere a un famoso hecho de 1974, aunque no sería establecida hasta el año 2001. La creencia de que somos visitados por extraterrestres encierra una historia de teorías y conspiraciones.</p>
-                    <a class="blogs-button" href="https://www.ambito.com/informacion-general/ovni/dia-del-por-que-se-celebra-el-2-julio-n5474536" >Leer mas</a>                    
-                </div>
-            </div>
-            
 
-        </section>
-        <section class="blogs__post-container">
-            <div class="grid__container">
-                <h3>Blogs posts</h3>
-                <article class="post__container">
-                    <img src="/assets/img/ovni.webp" alt="ovni">
-                    <p class="post__tittle">2 de Julio día del ovni</p>
-                    <p class="post__descripcion">La fecha refiere a un famoso hecho de 1974, aunque no sería establecida hasta el año 2001...</p>
-                    <a class="blogs-button" href="#">Leer más</a>
-                </article>
-                <article class="post__container">
-                    <img src="/assets/img/ovni.webp" alt="ovni">
-                    <p class="post__tittle">2 de Julio día del ovni</p>
-                    <p class="post__descripcion">La fecha refiere a un famoso hecho de 1974, aunque no sería establecida hasta el año 2001...</p>
-                    <a class="blogs-button" href="#">Leer más</a>
-                </article>
-                <article class="post__container">
-                    <img src="/assets/img/ovni.webp" alt="ovni">
-                    <p class="post__tittle">2 de Julio día del ovni</p>
-                    <p class="post__descripcion">La fecha refiere a un famoso hecho de 1974, aunque no sería establecida hasta el año 2001...</p>
-                    <a class="blogs-button" href="#">Leer más</a>
-                </article>
-                <article class="post__container">
-                    <img src="/assets/img/ovni.webp" alt="ovni">
-                    <p class="post__tittle">2 de Julio día del ovni</p>
-                    <p class="post__descripcion">La fecha refiere a un famoso hecho de 1974, aunque no sería establecida hasta el año 2001...</p>
-                    <a class="blogs-button" href="#">Leer más</a>
-                </article>
-                <article class="post__container">
-                    <img src="/assets/img/ovni.webp" alt="ovni">
-                    <p class="post__tittle">2 de Julio día del ovni</p>
-                    <p class="post__descripcion">La fecha refiere a un famoso hecho de 1974, aunque no sería establecida hasta el año 2001...</p>
-                    <a class="blogs-button" href="#">Leer más</a>
-                </article>
-               
-               
-            </div>
+    <main id="main-content">
+        <div class="grid__container">
+            <h1 class="section-title">Últimas Publicaciones</h1>
 
-        </section>
+            <!-- Estos contenedores se renderizarán dinámicamente con app.js -->
+            <section class="featured-blog" id="featured-post"></section>
+            <section class="blog-grid" id="blog-list"></section>
+        </div>
     </main>
+
     <footer>
-        <p>©Wild320 - 2022 </p>
+        <div class="grid__container">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Wild Jaramillo. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://github.com/wild320" class="social-btn" aria-label="GitHub" target="_blank"><span class="github social__icon"></span></a>
+                    <a href="https://www.linkedin.com/in/wild320/" class="social-btn" aria-label="LinkedIn" target="_blank"><span class="linkedin social__icon"></span></a>
+                </div>
+            </div>
     </footer>
-    
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573182675661?text=Hola,%20vengo%20de%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte." class="whatsapp-float" target="_blank" aria-label="Contáctame por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.05 2.5a13.5 13.5 0 0 0-11.43 20.72L2.5 30l6.98-2.03A13.48 13.48 0 0 0 16.05 29.5c7.44 0 13.5-6.06 13.5-13.5S23.49 2.5 16.05 2.5z" fill="#25D366"/>
+            <path d="M21.56 18.07c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.78.98-.95 1.18-.18.2-.35.23-.65.08-.3-.15-1.27-.47-2.43-1.5-1.02-.91-1.7-2.03-1.9-2.33-.2-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.5h-.58c-.2 0-.53.08-.8.38-.27.3-1.03 1-1.03 2.45 0 1.45 1.05 2.85 1.2 3.05.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.7.18 1.34.16 1.84.1.56-.07 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z" fill="#FFF"/>
+        </svg>
+    </a>
+    <!-- Scripts de renderizado dinámico -->
+    <script src="js/blogData.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
